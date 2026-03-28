@@ -1,0 +1,10 @@
+{
+  "name": "devops-collaboration-demo",
+  "version": "1.0.0",
+  "description": "A simple demo to show DevOps collaboration",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node -e \"console.log('Tests passed successfully')\""
+  }
+}

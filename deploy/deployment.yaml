@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: collaboration-demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: collaboration-demo
+  template:
+    metadata:
+      labels:
+        app: collaboration-demo
+    spec:
+      containers:
+        - name: collaboration-demo
+          image: laly9999/devops-collaboration-demo:v1
+          ports:
+            - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: collaboration-demo-service
+spec:
+  selector:
+    app: collaboration-demo
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+  type: LoadBalancer
