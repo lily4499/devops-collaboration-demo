@@ -11,7 +11,7 @@ const server = http.createServer((req, res) => {
   }
 
   res.writeHead(200, { "Content-Type": "text/plain" });
-  res.end("Hello from Dev and Ops working together!\n");
+  res.end("Hello from a shared DevOps workflow!\n");
 });
 
 server.listen(PORT, HOST, () => {
